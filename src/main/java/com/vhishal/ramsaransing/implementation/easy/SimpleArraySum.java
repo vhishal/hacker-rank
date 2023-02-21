@@ -1,7 +1,8 @@
 package com.vhishal.ramsaransing.implementation.easy;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Vhishal
@@ -13,13 +14,8 @@ public class SimpleArraySum {
 	 * Problem link: https://www.hackerrank.com/challenges/simple-array-sum/problem
 	 */
 	public static void main(String[] args) {
-		List<Integer> input = new ArrayList<>();
-		input.add(1);
-		input.add(2);
-		input.add(3);
-		input.add(4);
-		input.add(10);
-		input.add(11);		
+		int[] inputArr = {1, 2, 3, 4, 10, 11};
+		List<Integer> input =  Arrays.stream(inputArr).boxed().collect(Collectors.toList());
 		System.out.println(simpleArraySum(input)); // Should print 31
 	}
 
