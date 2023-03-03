@@ -22,7 +22,7 @@ public class CompareTheTriplets {
 		List<Integer> a = Arrays.stream(arrA).boxed().collect(Collectors.toList());
 		List<Integer> b = Arrays.stream(arrB).boxed().collect(Collectors.toList());
 
-		System.out.println( compareTriplets(a, b)); // should print [2,1]
+		System.out.println(compareTriplets(a, b)); // should print [2,1]
 	}
 
 	/**
@@ -32,9 +32,9 @@ public class CompareTheTriplets {
 	 * equal then no score is added. the return is a list with the scores of a and
 	 * b. For example input {17, 28, 30}, { 99, 16, 8 } Output = [2,1]
 	 * 
-	 * @param a {@link Integer} {@link List}
-	 * @param b {@link Integer} {@link List}
-	 * @return result {@link Integer} {@link List}
+	 * @param a {@link List}<{@link Integer}>
+	 * @param b {@link List}<{@link Integer}>
+	 * @return result {@link List}<{@link Integer}>
 	 */
 	static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 		List<Integer> result = new ArrayList<>();

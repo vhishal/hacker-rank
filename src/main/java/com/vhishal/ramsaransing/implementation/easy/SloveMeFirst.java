@@ -20,8 +20,8 @@ public class SloveMeFirst {
 	 * 
 	 * Takes both operand and returns the sum. For example 1 + 2 = 3
 	 * 
-	 * @param a operand
-	 * @param b operand
+	 * @param a int
+	 * @param b int
 	 * @return sum of a and b
 	 */
 	static int solveMeFirst(int a, int b) {
