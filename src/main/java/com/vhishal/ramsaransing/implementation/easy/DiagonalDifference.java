@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Vhishal
+ *
+ */
 public class DiagonalDifference {
 
 	public static final int COUNT_LEFT_TO_RIGHT_DIAGONAL = 1;

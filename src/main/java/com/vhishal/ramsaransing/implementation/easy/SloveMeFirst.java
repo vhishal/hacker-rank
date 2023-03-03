@@ -2,6 +2,10 @@ package com.vhishal.ramsaransing.implementation.easy;
 
 import java.util.Scanner;
 
+/**
+ * @author Vhishal
+ *
+ */
 public class SloveMeFirst {
 
 	/*
@@ -13,7 +17,6 @@ public class SloveMeFirst {
 		int b = in.nextInt();
 		in.close();
 		System.out.println(solveMeFirst(a, b));
-//		System.out.println(solveMeFirst(5, 7)); // Should print 12
 	}
 
 	/**
