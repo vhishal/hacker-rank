@@ -6,10 +6,10 @@
 |https://www.hackerrank.com/challenges/simple-array-sum |X|
 |https://www.hackerrank.com/challenges/compare-the-triplets |X|
 |https://www.hackerrank.com/challenges/a-very-big-sum |X|
-|https://www.hackerrank.com/challenges/diagonal-difference | | 
-|https://www.hackerrank.com/challenges/plus-minus | | 
-|https://www.hackerrank.com/challenges/staircase | | 
-|https://www.hackerrank.com/challenges/mini-max-sum | | 
+|https://www.hackerrank.com/challenges/diagonal-difference |X| 
+|https://www.hackerrank.com/challenges/plus-minus |X| 
+|https://www.hackerrank.com/challenges/staircase |X| 
+|https://www.hackerrank.com/challenges/mini-max-sum |X| 
 |https://www.hackerrank.com/challenges/birthday-cake-candles | | 
 |https://www.hackerrank.com/challenges/time-conversion | | 
 |https://www.hackerrank.com/challenges/grading | | 
