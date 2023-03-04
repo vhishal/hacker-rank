@@ -10,7 +10,7 @@
 |https://www.hackerrank.com/challenges/plus-minus |X| 
 |https://www.hackerrank.com/challenges/staircase |X| 
 |https://www.hackerrank.com/challenges/mini-max-sum |X| 
-|https://www.hackerrank.com/challenges/birthday-cake-candles | | 
+|https://www.hackerrank.com/challenges/birthday-cake-candles |X| 
 |https://www.hackerrank.com/challenges/time-conversion | | 
 |https://www.hackerrank.com/challenges/grading | | 
 |https://www.hackerrank.com/challenges/apple-and-orange | | 
