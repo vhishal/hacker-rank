@@ -21,15 +21,15 @@ public class AveryBigSum {
 	}
 
 	/**
-	 * Takes a List of Longs and returns the sum of this List. For example input
+	 * Takes a {@code List<Long>} and returns the sum of this List. For example input
 	 * [1000000001, 1000000002, 1000000003, 1000000004, 1000000005] output
 	 * 5000000015
 	 * 
-	 * @param input {@link List}<{@link Long}>
-	 * @return sum of input
+	 * @param input a list of {@link Long} value's
+	 * @return sum of the input
 	 */
 	static long aVeryBigSum(List<Long> input) {
-		return (long) input.stream().mapToDouble(i -> i).sum();
+		return (long) input.stream().mapToLong(i -> i).sum();
 	}
 
 }

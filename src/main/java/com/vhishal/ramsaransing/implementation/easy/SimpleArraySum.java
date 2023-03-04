@@ -20,11 +20,11 @@ public class SimpleArraySum {
 	}
 
 	/**
-	 * Takes a list of Integers and returns the sum of this list. For example input
-	 * [1, 2, 3, 4, 10, 11] output 31
+	 * Takes a {@code list<Integers>} and returns the sum of this list. For example
+	 * input [1, 2, 3, 4, 10, 11] output 31
 	 * 
-	 * @param input {@link List}<{@link Integer}> 
-	 * @return sum of input
+	 * @param input a list of {@link Integer} value's
+	 * @return sum of the input
 	 */
 	static int simpleArraySum(List<Integer> input) {
 		return input.stream().mapToInt(i -> i).sum();

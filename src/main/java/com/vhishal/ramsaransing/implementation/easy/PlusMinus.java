@@ -17,12 +17,12 @@ public class PlusMinus {
 	}
 
 	/**
-	 * Takes a List of integers and calculates how many zero's, positives and
-	 * negatives there are compared to the size of the List and prints this. For
+	 * Takes a {@code List<Integer>} and calculates how many zero's, positives and
+	 * negatives there are compared to the size of the {@code List} and prints this. For
 	 * example if the input is [-4, 3, -9, 0, 4, 1] the method will print' 0.500000,
 	 * 0.333333 and 0.166667'
 	 * 
-	 * @param input {@link List}<{@link Integer}> 
+	 * @param input a list of {@link Integer} value's
 	 */
 	static void plusMinus(List<Integer> input) {
 		double size = input.size();

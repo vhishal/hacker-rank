@@ -1,7 +1,5 @@
 package com.vhishal.ramsaransing.implementation.easy;
 
-import java.util.Scanner;
-
 /**
  * @author Vhishal
  *
@@ -12,16 +10,12 @@ public class SloveMeFirst {
 	 * Problem link: https://www.hackerrank.com/challenges/solve-me-first/problem
 	 */
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int a = in.nextInt();
-		int b = in.nextInt();
-		in.close();
-		System.out.println(solveMeFirst(a, b));
+		System.out.println(solveMeFirst(1, 2));
 	}
 
 	/**
 	 * 
-	 * Takes both operand and returns the sum. For example 1 + 2 = 3
+	 * Takes 2 {@code ints} and returns the sum. For example 1 + 2 = 3
 	 * 
 	 * @param a int
 	 * @param b int

@@ -25,7 +25,6 @@ public class DiagonalDifference {
 		for (int i = 0; i < inputArr.length; i++)
 			input.add(Arrays.stream(inputArr[i]).boxed().collect(Collectors.toList()));
 
-		System.out.println(input);
 		System.out.println(diagonalDifference(input));
 	}
 
@@ -34,7 +33,7 @@ public class DiagonalDifference {
 	 * its diagonals. For example is the input is [[11, 2, 4], [4, 5, 6], [10, 8,
 	 * -12]] the output will be 15
 	 * 
-	 * @param squareMatrix {@link List}<{@link List}<{@link Integer}>>
+	 * @param squareMatrix a list with lists of {@link Integer} value's
 	 * @return int difference between diagonals
 	 */
 	private static int diagonalDifference(List<List<Integer>> squareMatrix) {
@@ -56,9 +55,9 @@ public class DiagonalDifference {
 	 * the input is [[11, 2, 4], [4, 5, 6], [10, 8, -12]] the output will be 4 for
 	 * the left to right diagonal and 19 for the right to left diagonal.
 	 * 
-	 * @param matrix {@link List}<{@link List}<{@link Integer}>>
+	 * @param squareMatrix a list with lists of {@link Integer} value's
 	 * @param option int specifies the option for which diagonal the calculation should take place
-	 * @return int difference between diagonals
+	 * @return int the sum of one of the diagonals
 	 */
 	private static int calculateDiagonal(List<List<Integer>> squareMatrix, int option) {
 		int index = 0;

@@ -26,15 +26,16 @@ public class CompareTheTriplets {
 	}
 
 	/**
-	 * Takes 2 Lists of equal size and compares the elements. the element a(0) is
-	 * compared with b(0). If a is bigger than b then one is added to the score of
-	 * a, if b is bigger than a then one is added to the score of b. If they are
-	 * equal then no score is added. the return is a list with the scores of a and
-	 * b. For example input {17, 28, 30}, { 99, 16, 8 } Output = [2,1]
+	 * Takes 2 {@code Integer} {@code Lists} of equal size and compares the
+	 * elements. The element (0) of the first list(a) is compared with the element
+	 * (0) of the second list(b). If a is bigger than b then one is added to the
+	 * score of a, if b is bigger than a then one is added to the score of b. If
+	 * they are equal then no score is added. the return is a list with the scores
+	 * of a and b. For example input {17, 28, 30}, { 99, 16, 8 } Output = [2,1]
 	 * 
-	 * @param a {@link List}<{@link Integer}>
-	 * @param b {@link List}<{@link Integer}>
-	 * @return result {@link List}<{@link Integer}>
+	 * @param a a list of {@link Integer} value's
+	 * @param b a list of {@link Integer} value's
+	 * @return result a list of 2 {@link Integer} value's
 	 */
 	static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 		List<Integer> result = new ArrayList<>();
