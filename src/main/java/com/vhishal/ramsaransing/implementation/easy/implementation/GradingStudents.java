@@ -16,9 +16,7 @@ public class GradingStudents {
 	public static void main(String[] args) {
 		int[] grades = { 73, 67, 38, 33 };
 		List<Integer> gradesList = Arrays.stream(grades).boxed().collect(Collectors.toList());
-
-		List<Integer> result = gradingStudents(gradesList);
-		System.out.println(result);
+		System.out.println(gradingStudents(gradesList));
 	}
 
 	/**
