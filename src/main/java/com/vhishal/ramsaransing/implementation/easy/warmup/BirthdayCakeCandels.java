@@ -1,10 +1,14 @@
-package com.vhishal.ramsaransing.implementation.easy;
+package com.vhishal.ramsaransing.implementation.easy.warmup;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Vhishal
+ *
+ */
 public class BirthdayCakeCandels {
 
 	/*

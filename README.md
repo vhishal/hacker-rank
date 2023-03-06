@@ -11,8 +11,8 @@
 |https://www.hackerrank.com/challenges/staircase |X| 
 |https://www.hackerrank.com/challenges/mini-max-sum |X| 
 |https://www.hackerrank.com/challenges/birthday-cake-candles |X| 
-|https://www.hackerrank.com/challenges/time-conversion | | 
-|https://www.hackerrank.com/challenges/grading | | 
+|https://www.hackerrank.com/challenges/time-conversion |X| 
+|https://www.hackerrank.com/challenges/grading |X| 
 |https://www.hackerrank.com/challenges/apple-and-orange | | 
 |https://www.hackerrank.com/challenges/kangaroo | | 
 |https://www.hackerrank.com/challenges/between-two-sets | | 

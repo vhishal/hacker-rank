@@ -1,4 +1,4 @@
-package com.vhishal.ramsaransing.implementation.easy;
+package com.vhishal.ramsaransing.implementation.easy.warmup;
 
 /**
  * @author Vhishal
