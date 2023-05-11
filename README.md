@@ -13,9 +13,9 @@
 |https://www.hackerrank.com/challenges/birthday-cake-candles |X| 
 |https://www.hackerrank.com/challenges/time-conversion |X| 
 |https://www.hackerrank.com/challenges/grading |X| 
-|https://www.hackerrank.com/challenges/apple-and-orange | | 
-|https://www.hackerrank.com/challenges/kangaroo | | 
-|https://www.hackerrank.com/challenges/between-two-sets | | 
+|https://www.hackerrank.com/challenges/apple-and-orange |X| 
+|https://www.hackerrank.com/challenges/kangaroo |X| 
+|https://www.hackerrank.com/challenges/between-two-sets || 
 |https://www.hackerrank.com/challenges/breaking-best-and-worst-records | | 
 |https://www.hackerrank.com/challenges/the-birthday-bar | | 
 |https://www.hackerrank.com/challenges/divisible-sum-pairs| | 

@@ -27,7 +27,7 @@ public class Straircase {
 			for (int j = 0; j <= i; j++) {
 				sb.append("#");
 			}
-			System.out.println(sb.toString());
+			System.out.println(sb);
 		}
 	}
 }

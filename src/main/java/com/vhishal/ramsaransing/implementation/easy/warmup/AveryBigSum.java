@@ -29,7 +29,7 @@ public class AveryBigSum {
 	 * @return sum of the input
 	 */
 	static long aVeryBigSum(List<Long> input) {
-		return (long) input.stream().mapToLong(i -> i).sum();
+		return input.stream().mapToLong(i -> i).sum();
 	}
 
 }

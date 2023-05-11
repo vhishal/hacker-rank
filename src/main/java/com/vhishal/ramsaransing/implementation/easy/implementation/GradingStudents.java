@@ -28,7 +28,7 @@ public class GradingStudents {
 	 * @return output list of {@link Integer} value's
 	 */
 	static List<Integer> gradingStudents(List<Integer> grades) {
-		return grades.stream().map(grade -> checkAndUpdateGrade(grade)).collect(Collectors.toList());
+		return grades.stream().map(GradingStudents::checkAndUpdateGrade).collect(Collectors.toList());
 	}
 
 	/**

@@ -22,8 +22,7 @@ public class DiagonalDifference {
 		int[][] inputArr = { { 11, 2, 4 }, { 4, 5, 6 }, { 10, 8, -12 } };
 
 		List<List<Integer>> input = new ArrayList<>();
-		for (int i = 0; i < inputArr.length; i++)
-			input.add(Arrays.stream(inputArr[i]).boxed().collect(Collectors.toList()));
+		for (int[] ints : inputArr) input.add(Arrays.stream(ints).boxed().collect(Collectors.toList()));
 
 		System.out.println(diagonalDifference(input));
 	}

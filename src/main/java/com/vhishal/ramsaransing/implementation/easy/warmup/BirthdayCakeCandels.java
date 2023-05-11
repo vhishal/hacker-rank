@@ -26,7 +26,7 @@ public class BirthdayCakeCandels {
 	 * Takes a {@code List<Integer>} and returns the number of occurrence of the highest number.
 	 * For example if the input is { 5, 6, 7, 4, 4, 6, 7, 7} the output will be 3
 	 * 
-	 * @param input a list of {@link Integer} value's
+	 * @param candles a list of {@link Integer} value's
 	 * @return count of highest number in the list
 	 */
 	static int birthdayCakeCandles(List<Integer> candles) {
