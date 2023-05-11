@@ -47,10 +47,10 @@ public class AppleAndOrange {
 			List<Integer> applesList, List<Integer> orangesList) {
 
 		List<Integer> applesPosition = applesList.stream().map(apple -> apple + appleTree).toList();
-		int fallenAppelsCounter = 0;
+		int fallenApplesCounter = 0;
 		for (Integer applePosition : applesPosition) {
 			if (houseStart <= applePosition && applePosition <= houseEnd) {
-				fallenAppelsCounter++;
+				fallenApplesCounter++;
 			}
 		}
 		
@@ -62,7 +62,7 @@ public class AppleAndOrange {
 			}
 		}
 		
-		System.out.println(fallenAppelsCounter);
+		System.out.println(fallenApplesCounter);
 		System.out.println(fallenOrangesCounter);
 	}
 
