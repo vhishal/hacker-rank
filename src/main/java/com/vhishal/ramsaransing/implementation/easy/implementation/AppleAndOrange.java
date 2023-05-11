@@ -18,8 +18,8 @@ public class AppleAndOrange {
 		int houseEnd = 10;
 		int appleTree = 4;
 		int orangeTree = 12;
-		int[] appels = { 2, 3, -4 };
-		List<Integer> appelsList = Arrays.stream(appels).boxed().collect(Collectors.toList());
+		int[] apples = { 2, 3, -4 };
+		List<Integer> appelsList = Arrays.stream(apples).boxed().collect(Collectors.toList());
 		int[] oranges = { 3, -2, -4 };
 		List<Integer> orangesList = Arrays.stream(oranges).boxed().collect(Collectors.toList());
 		countApplesAndOranges(houseStart, houseEnd, appleTree, orangeTree, appelsList, orangesList);
@@ -40,21 +40,21 @@ public class AppleAndOrange {
 	 * @param houseEnd    int
 	 * @param appleTree   int
 	 * @param orangeTree  int
-	 * @param appelsList  a list of {@link Integer} value's
+	 * @param applesList  a list of {@link Integer} value's
 	 * @param orangesList a list of {@link Integer} value's
 	 */
 	static void countApplesAndOranges(int houseStart, int houseEnd, int appleTree, int orangeTree,
-			List<Integer> appelsList, List<Integer> orangesList) {
+			List<Integer> applesList, List<Integer> orangesList) {
 
-		List<Integer> appelsPosition = appelsList.stream().map(apple -> apple + appleTree).collect(Collectors.toList());
+		List<Integer> applesPosition = applesList.stream().map(apple -> apple + appleTree).toList();
 		int fallenAppelsCounter = 0;
-		for (Integer applePosition : appelsPosition) {
+		for (Integer applePosition : applesPosition) {
 			if (houseStart <= applePosition && applePosition <= houseEnd) {
 				fallenAppelsCounter++;
 			}
 		}
 		
-		List<Integer> orangesPosition = orangesList.stream().map(orange -> orange + orangeTree).collect(Collectors.toList());
+		List<Integer> orangesPosition = orangesList.stream().map(orange -> orange + orangeTree).toList();
 		int fallenOrangesCounter = 0;
 		for (Integer orangePosition : orangesPosition) {
 			if (houseStart <= orangePosition && orangePosition <= houseEnd) {

@@ -28,7 +28,7 @@ public class CompareTheTriplets {
 	/**
 	 * Takes 2 {@code Integer} {@code Lists} of equal size and compares the
 	 * elements. The element (0) of the first list(a) is compared with the element
-	 * (0) of the second list(b). If a is bigger than b then one is added to the
+	 * (0) of the second list(b). If an is bigger than b then one is added to the
 	 * score of a, if b is bigger than a then one is added to the score of b. If
 	 * they are equal then no score is added. the return is a list with the scores
 	 * of a and b. For example input {17, 28, 30}, { 99, 16, 8 } Output = [2,1]

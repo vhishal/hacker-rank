@@ -4,7 +4,7 @@ package com.vhishal.ramsaransing.implementation.easy.warmup;
  * @author Vhishal
  *
  */
-public class SloveMeFirst {
+public class SolveMeFirst {
 
 	/*
 	 * Problem link: https://www.hackerrank.com/challenges/solve-me-first/problem

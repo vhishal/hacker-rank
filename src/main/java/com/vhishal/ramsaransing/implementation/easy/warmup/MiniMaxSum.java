@@ -24,7 +24,7 @@ public class MiniMaxSum {
 	}
 
 	/**
-	 * Takes a a {@code list<Integers>} and calculates the minimum and maximum sum
+	 * Takes a {@code list<Integers>} and calculates the minimum and maximum sum
 	 * using n-1 elements. The results are printed. For example if the input is [1,
 	 * 2, 9, 4, 5] the method will print '12 20'
 	 * 

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * @author Vhishal
  *
  */
-public class BirthdayCakeCandels {
+public class BirthdayCakeCandles {
 
 	/*
 	 * Problem
@@ -27,7 +27,7 @@ public class BirthdayCakeCandels {
 	 * For example if the input is { 5, 6, 7, 4, 4, 6, 7, 7} the output will be 3
 	 * 
 	 * @param candles a list of {@link Integer} value's
-	 * @return count of highest number in the list
+	 * @return count of the highest number in the list
 	 */
 	static int birthdayCakeCandles(List<Integer> candles) {
 		candles.sort(Collections.reverseOrder());

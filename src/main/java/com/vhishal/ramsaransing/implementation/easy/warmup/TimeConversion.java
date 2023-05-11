@@ -19,7 +19,7 @@ public class TimeConversion {
 	}
 
 	/**
-	 * Takes a {@code String} input of time in AM/PM and returns the time in 24 hour
+	 * Takes a {@code String} input of time in AM/PM and returns the time in 24-hour
 	 * String format. For example input is '12:00:00AM' and the output is '00:00:00'
 	 * 
 	 * @param time {@link String} in AM/PM

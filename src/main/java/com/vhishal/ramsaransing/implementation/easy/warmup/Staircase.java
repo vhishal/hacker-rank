@@ -4,7 +4,7 @@ package com.vhishal.ramsaransing.implementation.easy.warmup;
  * @author Vhishal
  *
  */
-public class Straircase {
+public class Staircase {
 
 	/*
 	 * Problem link: https://www.hackerrank.com/challenges/staircase/problem
@@ -14,19 +14,14 @@ public class Straircase {
 	}
 
 	/**
-	 * Takes a int as input and prints a "staircase".
+	 * Takes an int as input and prints a "staircase".
 	 * 
 	 * @param input int number of steps
 	 */
 	static void staircase(int input) {
 		for (int i = 0; i < input; i++) {
-			StringBuilder sb = new StringBuilder();
-			for (int j = input - 1; j > i; j--) {
-				sb.append(" ");
-			}
-			for (int j = 0; j <= i; j++) {
-				sb.append("#");
-			}
+			String sb = " ".repeat(Math.max(0, input - 1 - i)) +
+					"#".repeat(i + 1);
 			System.out.println(sb);
 		}
 	}

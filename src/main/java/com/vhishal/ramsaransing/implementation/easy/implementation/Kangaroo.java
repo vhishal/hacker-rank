@@ -18,10 +18,10 @@ public class Kangaroo {
 	}
 
 	/**
-	 * This methods takes 4 parameters, the first a int indicating the start of the
-	 * first kangaroo, the second parameter a int indicating the velocity of the
-	 * jump of the first kangaroo, the third parameter a int indicating the start of
-	 * the second kangaroo and the fourth parameter a int indicating the velocity of
+	 * This method takes 4 parameters, the first an int indicating the start of the
+	 * first kangaroo, the second parameter an int indicating the velocity of the
+	 * jump of the first kangaroo, the third parameter an int indicating the start of
+	 * the second kangaroo and the fourth parameter an int indicating the velocity of
 	 * the jump of the second kangaroo. If the kangaroo land on the same space after
 	 * the same number of jumps the method will return "YES", otherwise it will
 	 * return "NO". For example if the input is 0, 3, 4, 2 the output will be "YES".
