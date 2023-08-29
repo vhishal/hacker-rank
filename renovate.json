@@ -5,12 +5,9 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor","patch"]
-    },
-    {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor","patch"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true
+       "automerge": true
     }
   ],
   "extends": [
