@@ -13,15 +13,19 @@
 | https://www.hackerrank.com/challenges/staircase                       | X      | 
 | https://www.hackerrank.com/challenges/time-conversion                 | X      | 
 
-| Easy Problems Implementation                                          | Solved | 
-|-----------------------------------------------------------------------|--------|
-| https://www.hackerrank.com/challenges/apple-and-orange                | X      |
-| https://www.hackerrank.com/challenges/bon-appetit                     | X      |
-| https://www.hackerrank.com/challenges/breaking-best-and-worst-records | X      |
-| https://www.hackerrank.com/challenges/counting-valleys                | X      |
-| https://www.hackerrank.com/challenges/divisible-sum-pairs             | X      |
-| https://www.hackerrank.com/challenges/grading                         | X      | 
-| https://www.hackerrank.com/challenges/kangaroo                        | X      |
-| https://www.hackerrank.com/challenges/utopian-tree                    | X      | 
+| Easy Problems Implementation                                               | Solved | 
+|----------------------------------------------------------------------------|--------|
+| https://www.hackerrank.com/challenges/angry-professor/problem              | X      |
+| https://www.hackerrank.com/challenges/apple-and-orange                     | X      |
+| https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem | X      |
+| https://www.hackerrank.com/challenges/bon-appetit                          | X      |
+| https://www.hackerrank.com/challenges/breaking-best-and-worst-records      | X      |
+| https://www.hackerrank.com/challenges/counting-valleys                     | X      |
+| https://www.hackerrank.com/challenges/divisible-sum-pairs                  | X      |
+| https://www.hackerrank.com/challenges/grading                              | X      | 
+| https://www.hackerrank.com/challenges/kangaroo                             | X      |
+| https://www.hackerrank.com/challenges/migratory-birds/problem              | X      |
+| https://www.hackerrank.com/challenges/the-birthday-bar/problem             | X      |
+| https://www.hackerrank.com/challenges/utopian-tree                         | X      |
 
 
