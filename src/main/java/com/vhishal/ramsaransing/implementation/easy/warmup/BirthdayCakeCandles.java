@@ -27,8 +27,8 @@ public class BirthdayCakeCandles {
      * @param candles a list of candle heights
      * @return the number of the tallest candles
      */
-    static long birthdayCakeCandles(List<Integer> candles) {
+    static int birthdayCakeCandles(List<Integer> candles) {
         int max = Collections.max(candles);
-        return candles.stream().filter(i -> i == max).count();
+        return (int) candles.stream().filter(i -> i == max).count();
     }
 }
