@@ -1,4 +1,4 @@
-package com.vhishal.ramsaransing.implementation.easy.warmup;
+package com.vhishal.ramsaransing.easy.warmup;
 
 /**
  * This class provides a solution to the problem of adding two integers.

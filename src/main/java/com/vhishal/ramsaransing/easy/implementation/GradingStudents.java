@@ -1,4 +1,4 @@
-package com.vhishal.ramsaransing.implementation.easy.implementation;
+package com.vhishal.ramsaransing.easy.implementation;
 
 import java.util.Arrays;
 import java.util.List;
