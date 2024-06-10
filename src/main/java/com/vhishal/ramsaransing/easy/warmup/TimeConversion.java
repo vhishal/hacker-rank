@@ -1,4 +1,4 @@
-package com.vhishal.ramsaransing.implementation.easy.warmup;
+package com.vhishal.ramsaransing.easy.warmup;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

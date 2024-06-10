@@ -1,4 +1,4 @@
-package com.vhishal.ramsaransing.implementation.easy.implementation;
+package com.vhishal.ramsaransing.easy.implementation;
 
 /**
  * This class represents a solution to the problem of determining if two kangaroos will meet.
