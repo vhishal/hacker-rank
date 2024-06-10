@@ -16,20 +16,20 @@
 | https://www.hackerrank.com/challenges/apple-and-orange                | X      | 
 | https://www.hackerrank.com/challenges/kangaroo                        | X      | 
 | https://www.hackerrank.com/challenges/between-two-sets                |        | 
-| https://www.hackerrank.com/challenges/breaking-best-and-worst-records |        | 
+| https://www.hackerrank.com/challenges/breaking-best-and-worst-records | X      | 
 | https://www.hackerrank.com/challenges/the-birthday-bar                |        | 
-| https://www.hackerrank.com/challenges/divisible-sum-pairs             |        | 
+| https://www.hackerrank.com/challenges/divisible-sum-pairs             | X      | 
 | https://www.hackerrank.com/challenges/migratory-birds                 |        | 
-| https://www.hackerrank.com/challenges/bon-appetit                     |        | 
+| https://www.hackerrank.com/challenges/bon-appetit                     | X      | 
 | https://www.hackerrank.com/challenges/sock-merchant                   |        | 
 | https://www.hackerrank.com/challenges/drawing-book                    |        | 
-| https://www.hackerrank.com/challenges/counting-valleys                |        | 
+| https://www.hackerrank.com/challenges/counting-valleys                | X      | 
 | https://www.hackerrank.com/challenges/electronics-shop                |        | 
 | https://www.hackerrank.com/challenges/cats-and-a-mouse                |        | 
 | https://www.hackerrank.com/challenges/picking-numbers                 |        | 
 | https://www.hackerrank.com/challenges/the-hurdle-race                 |        | 
 | https://www.hackerrank.com/challenges/designer-pdf-viewer             |        | 
-| https://www.hackerrank.com/challenges/utopian-tree                    |        | 
+| https://www.hackerrank.com/challenges/utopian-tree                    | X      | 
 | https://www.hackerrank.com/challenges/angry-professor                 |        | 
 | https://www.hackerrank.com/challenges/beautiful-days-at-the-movies    |        | 
 | https://www.hackerrank.com/challenges/strange-advertising             |        | 
