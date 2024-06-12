@@ -37,7 +37,6 @@ public class SockMerchant {
         for (int sock : ar) {
             sockCount.put(sock, sockCount.getOrDefault(sock, 0) + 1);
         }
-        System.out.println(sockCount);
         return sockCount.values().stream().mapToInt(count -> count / 2).sum();
     }
 }
