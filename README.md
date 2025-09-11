@@ -20,11 +20,13 @@
 | https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem | X      |
 | https://www.hackerrank.com/challenges/bon-appetit                          | X      |
 | https://www.hackerrank.com/challenges/breaking-best-and-worst-records      | X      |
+| https://www.hackerrank.com/challenges/cats-and-a-mouse/problem             | X      |
 | https://www.hackerrank.com/challenges/counting-valleys                     | X      |
 | https://www.hackerrank.com/challenges/divisible-sum-pairs                  | X      |
 | https://www.hackerrank.com/challenges/grading                              | X      | 
 | https://www.hackerrank.com/challenges/kangaroo                             | X      |
 | https://www.hackerrank.com/challenges/migratory-birds/problem              | X      |
+| https://www.hackerrank.com/challenges/sock-merchant/problem                | X      |	
 | https://www.hackerrank.com/challenges/the-birthday-bar/problem             | X      |
 | https://www.hackerrank.com/challenges/utopian-tree                         | X      |
 
