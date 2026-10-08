@@ -1,0 +1,27 @@
+# Configuration for the `secrets` job in .github/workflows/ci.yml.
+#
+# The scan covers git history, so it sees values this repository has committed and
+# later deleted, not just what is at the tip.
+#
+# When you add an entry, allowlist it by its exact **value**, not by path: the file
+# that carries a fixture today then still fails the build if a *different* secret is
+# ever added to it. Say in a comment what the value is and why it is safe, so an
+# exception cannot outlive its reason.
+#
+# There is nothing to allowlist, and that is the finding rather than an omission:
+# this repo holds only HackerRank solutions. It has no accounts, no configuration
+# and no credentials of its own, and a full-history scan is clean today. This file
+# exists so the first false positive has somewhere to go -- gitleaks' default
+# ruleset is broad, and a puzzle input is exactly the shape an entropy rule flags.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "No exceptions yet -- see the note above before adding one"
+
+paths = [
+  # Untracked Maven output, so the CI scan never reaches it. Listed for the sake
+  # of `gitleaks dir .` run locally.
+  '''target/.*''',
+]

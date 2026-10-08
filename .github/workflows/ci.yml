@@ -1,0 +1,83 @@
+name: CI
+
+# The gate for this repo: the solutions still compile, and nothing secret was
+# committed. Push to `main` only -- there are no pull requests here, and a second
+# trigger would double the bill for the same commit.
+#
+# `mvn verify` rather than `mvn test`: there are no test classes today, so `test`
+# would pass on an empty suite and prove only that Maven started. `verify` compiles
+# every solution and packages the jar, which is the failure this repo can actually
+# have -- a solution pasted back from HackerRank that does not build here. If test
+# classes are added later this same command picks them up with no change.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      full-history-scan:
+        description: >-
+          Re-scan the entire git history for secrets, not just the recent window.
+        type: boolean
+        default: false
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Nothing here writes to the repository -- the jobs compile and scan.
+permissions:
+  contents: read
+
+jobs:
+  # A README edit should not pay for a JDK install and a Maven build.
+  changes:
+    name: Detect changed areas
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      app: ${{ steps.filter.outputs.app }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # paths-filter compares with git (not the API) for a push to the branch it is
+          # already on, so the commit before the push has to exist locally.
+          fetch-depth: 2
+      - uses: dorny/paths-filter@v3
+        id: filter
+        # Fail OPEN. If detection breaks -- a force-push, a first commit, a shallow
+        # history -- the output comes back empty and the `!= 'false'` test below runs
+        # the job anyway.
+        continue-on-error: true
+        with:
+          base: ${{ github.ref_name }}
+          filters: |
+            app:
+              - 'src/**'
+              - 'pom.xml'
+
+  build:
+    name: Compile + package
+    needs: changes
+    if: ${{ needs.changes.outputs.app != 'false' }}
+    runs-on: ubuntu-latest
+    # Runaway guard: GitHub's default is 360 minutes, which on a metered account
+    # means one hung job can cost a sixth of the month. Sized well above the
+    # observed runtime -- if this trips, something is stuck, not slow.
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          # Matches maven.compiler.source/target in pom.xml.
+          java-version: "17"
+          cache: maven
+      - name: Verify
+        run: mvn -B --no-transfer-progress verify
+
+  secrets:
+    uses: vhishal/project-template/.github/workflows/reusable-secret-scan.yml@main
+    with:
+      # Default is a shallow window; the full sweep is a deliberate dispatch.
+      full-history-scan: ${{ github.event_name == 'workflow_dispatch' && inputs.full-history-scan }}

@@ -16,8 +16,12 @@ replay_pid*
 # J2ME
 .mtj.tmp/
 
+# Maven
+target/
+
 # IDE
-*.idea/
+.idea/
+.vscode/
 
 # Logs
 *.log
@@ -25,3 +29,12 @@ replay_pid*
 # AI Tools
 .claude/
 !CLAUDE.md
+
+# Local environment. `.env.example` is the committed template; the real file never is.
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
