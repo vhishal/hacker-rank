@@ -76,8 +76,19 @@ jobs:
       - name: Verify
         run: mvn -B --no-transfer-progress verify
 
+  # Inlined copy of project-template's reusable-secret-scan.yml. This repo is public
+  # and project-template is private, and GitHub does not let a public repo call a
+  # workflow from a private one -- the `uses:` fails as "workflow was not found".
   secrets:
-    uses: vhishal/project-template/.github/workflows/reusable-secret-scan.yml@main
-    with:
-      # Default is a shallow window; the full sweep is a deliberate dispatch.
-      full-history-scan: ${{ github.event_name == 'workflow_dispatch' && inputs.full-history-scan }}
+    name: Secret scan (git history)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Default is a shallow window; the full sweep is a deliberate dispatch.
+          fetch-depth: ${{ (github.event_name == 'workflow_dispatch' && inputs.full-history-scan) && 0 || 50 }}
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
