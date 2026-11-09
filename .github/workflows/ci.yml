@@ -30,20 +30,25 @@ permissions:
   contents: read
 
 jobs:
-  # A README edit should not pay for a JDK install and a Maven build.
+  # A README edit should not pay for a JDK install and a Maven build, but still gets its
+  # secret scan. Inlined copy of project-template's reusable-changes.yml (path filter + secret
+  # scan in one job): this repo is public and project-template is private, and GitHub does not
+  # let a public repo call a workflow from a private one -- the `uses:` fails as "workflow was
+  # not found".
   changes:
-    name: Detect changed areas
+    name: Detect changes + secret scan
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     outputs:
       app: ${{ steps.filter.outputs.app }}
     steps:
-      - uses: actions/checkout@v4
+      # The secret scan's window is deep enough for paths-filter too: for a push to the branch
+      # it is on, it diffs against the commit before the push, which has to exist locally.
+      - uses: actions/checkout@v7
         with:
-          # paths-filter compares with git (not the API) for a push to the branch it is
-          # already on, so the commit before the push has to exist locally.
-          fetch-depth: 2
-      - uses: dorny/paths-filter@v3
+          # Default is a shallow window; the full sweep is a deliberate dispatch.
+          fetch-depth: ${{ (github.event_name == 'workflow_dispatch' && inputs.full-history-scan) && 0 || 50 }}
+      - uses: dorny/paths-filter@v4
         id: filter
         # Fail OPEN. If detection breaks -- a force-push, a first commit, a shallow
         # history -- the output comes back empty and the `!= 'false'` test below runs
@@ -55,6 +60,10 @@ jobs:
             app:
               - 'src/**'
               - 'pom.xml'
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
 
   build:
     name: Compile + package
@@ -66,8 +75,8 @@ jobs:
     # observed runtime -- if this trips, something is stuck, not slow.
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           # Matches maven.compiler.source/target in pom.xml.
@@ -75,20 +84,3 @@ jobs:
           cache: maven
       - name: Verify
         run: mvn -B --no-transfer-progress verify
-
-  # Inlined copy of project-template's reusable-secret-scan.yml. This repo is public
-  # and project-template is private, and GitHub does not let a public repo call a
-  # workflow from a private one -- the `uses:` fails as "workflow was not found".
-  secrets:
-    name: Secret scan (git history)
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          # Default is a shallow window; the full sweep is a deliberate dispatch.
-          fetch-depth: ${{ (github.event_name == 'workflow_dispatch' && inputs.full-history-scan) && 0 || 50 }}
-      - uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_CONFIG: .gitleaks.toml
