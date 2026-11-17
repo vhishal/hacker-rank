@@ -1,8 +1,9 @@
 name: CI
 
+# Automatic checks run through scripts/ci-local.sh; dispatch remains available.
+
 # The gate for this repo: the solutions still compile, and nothing secret was
-# committed. Push to `main` only -- there are no pull requests here, and a second
-# trigger would double the bill for the same commit.
+# committed.
 #
 # `mvn verify` rather than `mvn test`: there are no test classes today, so `test`
 # would pass on an empty suite and prove only that Maven started. `verify` compiles
@@ -11,8 +12,6 @@ name: CI
 # classes are added later this same command picks them up with no change.
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     inputs:
       full-history-scan:
@@ -42,14 +41,17 @@ jobs:
     outputs:
       app: ${{ steps.filter.outputs.app }}
     steps:
-      # The secret scan's window is deep enough for paths-filter too: for a push to the branch
-      # it is on, it diffs against the commit before the push, which has to exist locally.
+      # The secret scan's window is deep enough for paths-filter too, which diffs against an
+      # earlier commit that has to exist locally.
       - uses: actions/checkout@v7
         with:
           # Default is a shallow window; the full sweep is a deliberate dispatch.
           fetch-depth: ${{ (github.event_name == 'workflow_dispatch' && inputs.full-history-scan) && 0 || 50 }}
       - uses: dorny/paths-filter@v4
         id: filter
+        # A manual run is a full run: on workflow_dispatch paths-filter diffs only the last
+        # commit. Skipped, the output stays empty and `!= 'false'` below runs the job.
+        if: github.event_name != 'workflow_dispatch'
         # Fail OPEN. If detection breaks -- a force-push, a first commit, a shallow
         # history -- the output comes back empty and the `!= 'false'` test below runs
         # the job anyway.
