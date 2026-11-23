@@ -19,22 +19,22 @@ replay_pid*
 # Maven
 target/
 
-# IDE
-.idea/
-.vscode/
-
-# Logs
-*.log
-
-# AI Tools
-.claude/
-!CLAUDE.md
-
 # Local environment. `.env.example` is the committed template; the real file never is.
 .env
 .env.*
 !.env.example
 
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# AI tools
+.claude/
+.playwright-mcp/
